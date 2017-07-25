@@ -1,11 +1,11 @@
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/7799382/28500818-232faee0-6f84-11e7-9f4f-71ba89c8122e.png" alt="Disk" />
+    <img src="https://user-images.githubusercontent.com/7799382/28520084-01e6384a-7023-11e7-8b18-6c79494494a8.png" alt="Disk" />
 </p>
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/7799382/28500846-b53d3960-6f84-11e7-9f4b-164133170283.png" alt="Platform: iOS 10+" />
     <a href="https://developer.apple.com/swift" target="_blank"><img src="https://user-images.githubusercontent.com/7799382/28500845-b43a66fa-6f84-11e7-8281-6e689d8aaab9.png" alt="Language: Swift 4" /></a>
-    <a href="https://cocoapods.org/pods/Disk" target="_blank"><img src="https://user-images.githubusercontent.com/7799382/28508059-ce12944a-6fec-11e7-9c50-7dfb2f3d5429.png" alt="CocoaPods compatible" /></a>
+    <a href="https://cocoapods.org/pods/Disk" target="_blank"><img src="https://user-images.githubusercontent.com/7799382/28521525-f437c744-7028-11e7-8ef8-2335381f10eb.png" alt="CocoaPods compatible" /></a>
     <img src="https://user-images.githubusercontent.com/7799382/28500847-b6393648-6f84-11e7-9a7a-f6ae78207416.png" alt="License: MIT" />
 </p>
 
@@ -21,7 +21,7 @@ Disk is a **powerful** and **simple** file management library built with <a href
 
 ## Compatibility
 
-Disk requires **iOS 10+** and is compatible with **Swift 4** projects.
+Disk requires **iOS 10+** and is compatible with **Swift 4** projects. Therefore you must use Xcode 9 when working with Disk.
 
 ## Installation
 
@@ -93,7 +93,7 @@ Disk.store(message, to: .caches, as: "message")
 let retrievedMessage = Disk.retrieve("message", from: .caches, as: Message.self)
 ```
 
-If you Option + click `retrievedMessage`, then Xcode will show its type as `Message?`. Pretty neat, huh?
+If you Alt + click `retrievedMessage`, then Xcode will show its type as `Message?`. Pretty neat, huh?
 <img src="https://user-images.githubusercontent.com/7799382/28517945-186e41dc-701b-11e7-9758-fa075ecd7df7.png" alt="example">
 
 So what happened in the background? Disk first converts `message` to JSON data and stores it as a .json file to the caches directory. Then when we retrieve the `message`, Disk automatically converts the JSON data to our `Codable` struct type. If Disk runs into any problems, then it prints details about any failed operations and returns `nil` instead.
@@ -211,7 +211,7 @@ Let's say, for example, that you try to write data to a location on the file sys
 In this case, Disk took care of everything for you. You should have first checked if a file exists in the location you wanted to store data to (using `fileExists(:in:)`), and then stored the data.
 
 ## Documentation
-Option + click on any of Disk's methods for detailed documentation.
+Alt + click on any of Disk's methods for detailed documentation.
 <img src="https://user-images.githubusercontent.com/7799382/28500816-231ab8c8-6f84-11e7-93cb-875fceeeac65.png" alt="documentation">
 
 ## License
@@ -220,7 +220,7 @@ Disk uses the MIT license. Please file an issue if you have any questions or if 
 
 ## Contribute
 
-Disk is in its infancy, but v0.0.7 provides the barebones of the simplest way to persist data in iOS. Please feel free to send pull requests of any features you think would add to Disk and its philosophy.
+Disk is in its infancy, but v0.0.8 provides the barebones of the simplest way to persist data in iOS. Please feel free to send pull requests of any features you think would add to Disk and its philosophy.
 
 ## Questions?
 
