@@ -93,7 +93,7 @@ Disk.store(message, to: .caches, as: "message")
 let retrievedMessage = Disk.retrieve("message", from: .caches, as: Message.self)
 ```
 
-If you Option + click `retrievedMessage`, then Xcode will show its type as `Message?`. Pretty neat, huh?
+If you Alt + click `retrievedMessage`, then Xcode will show its type as `Message?`. Pretty neat, huh?
 <img src="https://user-images.githubusercontent.com/7799382/28517945-186e41dc-701b-11e7-9758-fa075ecd7df7.png" alt="example">
 
 So what happened in the background? Disk first converts `message` to JSON data and stores it as a .json file to the caches directory. Then when we retrieve the `message`, Disk automatically converts the JSON data to our `Codable` struct type. If Disk runs into any problems, then it prints details about any failed operations and returns `nil` instead.
@@ -211,7 +211,7 @@ Let's say, for example, that you try to write data to a location on the file sys
 In this case, Disk took care of everything for you. You should have first checked if a file exists in the location you wanted to store data to (using `fileExists(:in:)`), and then stored the data.
 
 ## Documentation
-Option + click on any of Disk's methods for detailed documentation.
+Alt + click on any of Disk's methods for detailed documentation.
 <img src="https://user-images.githubusercontent.com/7799382/28500816-231ab8c8-6f84-11e7-93cb-875fceeeac65.png" alt="documentation">
 
 ## License
